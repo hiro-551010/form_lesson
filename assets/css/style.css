@@ -162,3 +162,152 @@
 .resend-mail {
   display: inline-block;
 }
+
+/* form内部のクラス */
+
+.form-text {
+  margin-bottom: 5px;
+}
+
+textarea {
+  resize: none;
+}
+
+.form-component {
+  border-collapse: collapse;
+}
+
+.form-component:not(first-child) {
+  margin-bottom: 20px;
+}
+
+.form-wrap {
+  display: inline-block;
+  width: 100%;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.form-required:after {
+  margin-left: 3px;
+  color: red;
+  content: "※";
+}
+
+/* https://techacademy.jp/magazine/39795 */
+.form-input-default {
+  background-color: #f7f7f7;
+  border: none;
+  outline: 1px solid #e8e4da;
+  margin: 0;
+  height: 36px;
+  line-height: 15px;
+  font-size: 16px;
+  text-align: center;
+  vertical-align: top;
+  text-align: left;
+  width: 100%;
+}
+
+.form-input-default:focus {
+  background-color: #fff;
+}
+
+.form-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  box-sizing: border-box;
+  padding-left: 5px;
+  font-size: 13px;
+}
+
+.form-name {
+  width: 47%;
+}
+
+.form-name:last-child {
+  margin-left: 20px
+}
+
+/* 丸の位置のずれ https://nichiyogogo.com/radiobutton_checkbox/ */
+/* 丸の色変更 https://www.trevo-web.com/tech/radiobutton */
+.form-radio {
+  outline: none;
+  color: #01bfbd;
+  width: 20px;
+  position: relative;
+  bottom: 15px;
+  margin: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.form-select {
+
+}
+
+.form-check {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  margin: 0;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.form-check:checked::after {
+  position: relative;
+  z-index: 1;
+  content: "✔";
+  color: #01bfbd;
+  font-size: 30px;
+}
+
+.form-check-wrap {
+  padding-bottom: 10px;
+}
+
+.form-check-wrap:last-child {
+  padding-bottom: 0;
+}
+
+.form-check-text {
+  margin-left: 10px;
+}
+
+.form-textarea {
+  height: 100px;
+  line-height: 2;
+}
+
+.form-button {
+  box-sizing: border-box;
+  background-color: #01bfbd;
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 3px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #d9d9d9;
+}
+
+.form-button:hover {
+  background-color: #02a8a7;
+  transition: 0.5s;
+}
+
+.form-button:active {
+  background-color: #fff;
+  color: #01bfbd;
+  
+}
