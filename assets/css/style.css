@@ -249,7 +249,7 @@ input[type="radio"] {
   justify-content: start;
 }
 
-.form-radio-label span {
+.form-radio-span {
   cursor: pointer;
   color: gray;
   margin-left: 30px;
@@ -257,7 +257,7 @@ input[type="radio"] {
   position: relative;
 }
 
-.form-radio-label span::before {
+.form-radio-span::before {
   content: "";
   border: 1px solid gray;
   border-radius: 50%;
@@ -267,7 +267,7 @@ input[type="radio"] {
   left: -15px;
 }
 
-.form-radio-label span::after {
+.form-radio-span::after {
   content: "";
   background-color: #01bfbd;
   border-radius: 50%;
@@ -279,7 +279,7 @@ input[type="radio"] {
   opacity: 0;
 }
 
-.form-input-radio:checked + span::after {
+.form-radio-label input:checked + span::after {
   opacity: 1;
 }
 
