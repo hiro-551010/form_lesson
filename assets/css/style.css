@@ -165,10 +165,7 @@
 
 /* form内部のクラス */
 
-.form-text {
-  margin-bottom: 5px;
-}
-
+/* 共通css */
 textarea {
   resize: none;
 }
@@ -189,7 +186,8 @@ textarea {
 .form-label {
   display: block;
   margin-bottom: 5px;
-  font-size: 14px;
+  font-size: 12px;
+  color: gray;
 }
 
 .form-required:after {
@@ -203,6 +201,7 @@ textarea {
   background-color: #f7f7f7;
   border: none;
   outline: 1px solid #e8e4da;
+  border-radius: 3px;
   margin: 0;
   height: 36px;
   line-height: 15px;
@@ -227,6 +226,7 @@ textarea {
   font-size: 13px;
 }
 
+/* 名前 */
 .form-name {
   width: 47%;
 }
@@ -235,23 +235,69 @@ textarea {
   margin-left: 20px
 }
 
-/* 丸の位置のずれ https://nichiyogogo.com/radiobutton_checkbox/ */
-/* 丸の色変更 https://www.trevo-web.com/tech/radiobutton */
-.form-radio {
-  outline: none;
-  color: #01bfbd;
-  width: 20px;
-  position: relative;
-  bottom: 15px;
-  margin: 5px;
+/* ラジオボタン */
+input[type="radio"] {
+  display: none;
+}
+
+.form-label {
+  padding-bottom: 5px;
+}
+
+.form-radio-wrap {
+  display: flex;
+  justify-content: start;
+}
+
+.form-radio-label span {
   cursor: pointer;
-  color: white;
+  color: gray;
+  margin-left: 30px;
+  padding-left: 5px;
+  position: relative;
 }
 
-.form-select {
-
+.form-radio-label span::before {
+  content: "";
+  border: 1px solid gray;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  left: -15px;
 }
 
+.form-radio-label span::after {
+  content: "";
+  background-color: #01bfbd;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 5px;
+  left: -11px;
+  opacity: 0;
+}
+
+.form-input-radio:checked + span::after {
+  opacity: 1;
+}
+
+/* セレクト */
+.form-select-wrap {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: menulist;
+  -moz-appearance: menulist;
+  appearance: menulist;
+  color: gray;
+  padding-left: 5px;
+  width: 250px;
+  font-size: 12px;
+}
+
+/* 希望コース */
 .form-check {
   appearance: none;
   -webkit-appearance: none;
@@ -282,32 +328,35 @@ textarea {
 
 .form-check-text {
   margin-left: 10px;
+  color: gray;
 }
 
+/* テキストエリア */
 .form-textarea {
   height: 100px;
   line-height: 2;
 }
 
+/* 送信ボタン */
 .form-button {
   box-sizing: border-box;
   background-color: #01bfbd;
   width: 100%;
-  padding: 15px 0;
+  padding: 14px 0;
   border-radius: 3px;
   border: none;
   color: #fff;
   cursor: pointer;
   border: 1px solid #d9d9d9;
+  font-size: 13px;
+  transition: 0.5s;
 }
 
 .form-button:hover {
   background-color: #02a8a7;
-  transition: 0.5s;
 }
 
 .form-button:active {
   background-color: #fff;
   color: #01bfbd;
-  
 }
