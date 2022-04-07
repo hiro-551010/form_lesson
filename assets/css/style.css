@@ -172,6 +172,8 @@ textarea {
 
 .form-component {
   border-collapse: collapse;
+  display: flex;
+  flex-grow: 1;
 }
 
 .form-component:not(first-child) {
@@ -214,6 +216,7 @@ textarea {
 
 .form-input-default:focus {
   background-color: #fff;
+  border: 1px solid #00fce7;
 }
 
 .form-input {
@@ -228,11 +231,11 @@ textarea {
 
 /* 名前 */
 .form-name {
-  width: 47%;
+  margin-right: 20px;
 }
 
 .form-name:last-child {
-  margin-left: 20px
+  margin-right: 0;
 }
 
 /* ラジオボタン */
@@ -259,12 +262,13 @@ input[type="radio"] {
 
 .form-radio-span::before {
   content: "";
-  border: 1px solid gray;
+  border: 1px solid #cccccc;
   border-radius: 50%;
   width: 14px;
   height: 14px;
   position: absolute;
   left: -15px;
+  background-color: #f2f2f2;
 }
 
 .form-radio-span::after {
@@ -279,7 +283,7 @@ input[type="radio"] {
   opacity: 0;
 }
 
-.form-radio-label input:checked + span::after {
+.form-radio-label input:checked + .form-radio-span::after {
   opacity: 1;
 }
 
@@ -293,33 +297,18 @@ input[type="radio"] {
   appearance: menulist;
   color: gray;
   padding-left: 5px;
-  width: 250px;
+  width: 50%;
   font-size: 12px;
 }
 
 /* 希望コース */
-.form-check {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -o-appearance: none;
-  margin: 0;
-  width: 15px;
-  height: 15px;
-  text-align: center;
-  background-color: #ffffff;
-}
-
-.form-check:checked::after {
-  position: relative;
-  z-index: 1;
-  content: "✔";
-  color: #01bfbd;
-  font-size: 30px;
+input[type="checkbox"] {
+  display: none;
 }
 
 .form-check-wrap {
   padding-bottom: 10px;
+  display: block;
 }
 
 .form-check-wrap:last-child {
@@ -327,8 +316,39 @@ input[type="radio"] {
 }
 
 .form-check-text {
+  padding-left: 20px;
   margin-left: 10px;
   color: gray;
+  position: relative;
+  cursor: default;
+}
+
+.form-check-text::before,
+.form-check-text::after {
+  content:"";
+  display:block;
+  position:absolute;
+}
+
+.form-check-text::before{
+  width:16px;
+  height:16px;
+  background:#ffffff;
+  border: 1px solid gray;
+}
+
+.form-check-text::after {
+  border-left: 3px solid #01bfbd;
+  border-bottom: 3px solid #01bfbd;
+  width: 18px;
+  height: 10px;
+  transform: rotate(-45deg);
+  top: -1px;
+  opacity: 0;
+}
+
+.form-check-wrap input:checked + .form-check-text::after {
+  opacity: 1;
 }
 
 /* テキストエリア */
@@ -338,6 +358,10 @@ input[type="radio"] {
 }
 
 /* 送信ボタン */
+.form-button-wrap {
+  width: 100%;
+}
+
 .form-button {
   box-sizing: border-box;
   background-color: #01bfbd;

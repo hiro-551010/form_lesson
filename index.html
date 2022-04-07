@@ -104,16 +104,33 @@
             <!-- 希望コース -->
             <div class="form-component">
               <div class="form-wrap">
-                <label class="form-label" for="check">希望コース</label>
-                <div class="form-check-wrap">
-                  <input class="form-input-default form-check" type="checkbox" name="check" value="frontend"><span class="form-check-text">フロントエンド</span>
+                <p class="form-label" for="check">希望コース</p>
+                <div>
+                  <label class="form-check-wrap">
+                    <input class="form-input-default form-check" type="checkbox" name="check" value="frontend">
+                    <span class="form-check-text">フロントエンド</span>
+                  </label>
+                  <label class="form-check-wrap">
+                    <input class="form-input-default form-check" type="checkbox" name="check" value="backend">
+                    <span class="form-check-text">バックエンド</span>
+                  </label>
+                  <label class="form-check-wrap">
+                    <input class="form-input-default form-check" type="checkbox" name="check" value="app">
+                    <span class="form-check-text">アプリ</span>
+                  </label>
+                </div>
+                <!-- <div class="form-check-wrap">
+                  <input class="form-input-default form-check" type="checkbox" name="check" value="frontend">
+                  <span class="form-check-text">フロントエンド</span>
+                </div> -->
+                <!-- <div class="form-check-wrap">
+                  <input class="form-input-default form-check" type="checkbox" name="check" value="backend">
+                  <span class="form-check-text">バックエンド</span>
                 </div>
                 <div class="form-check-wrap">
-                  <input class="form-input-default form-check" type="checkbox" name="check" value="backend"><span class="form-check-text">バックエンド</span>
-                </div>
-                <div class="form-check-wrap">
-                  <input class="form-input-default form-check" type="checkbox" name="check" value="app"><span class="form-check-text">アプリ</span>
-                </div>
+                  <input class="form-input-default form-check" type="checkbox" name="check" value="app">
+                  <span class="form-check-text">アプリ</span>
+                </div> -->
               </div>
             </div>
             <!-- 備考 -->
@@ -140,23 +157,3 @@
     </section>
   </body>
 </html>
-
-<div class="form-component">
-  <div class="form-wrap form-radio">
-    <p class="form-label">性別</p>
-    <div class="form-radio-wrap">
-      <label class="form-radio-label">
-        <input class="form-input-radio" type="radio" name="sex" value="man">
-        <span class="form-radio-span">男性</span>
-      </label>
-      <label class="form-radio-label">
-        <input class="form-input-radio" type="radio" name="sex" value="woman">
-        <span class="form-radio-span">女性</span>
-      </label>
-      <label class="form-radio-label">
-        <input class="form-input-radio" type="radio" name="sex" value="lgbt">
-        <span class="form-radio-span">その他</span>
-      </label>
-    </div>
-  </div>
-</div>
